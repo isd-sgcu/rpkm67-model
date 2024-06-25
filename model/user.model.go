@@ -10,4 +10,5 @@ type User struct {
 	Lastname  string        `json:"lastname" gorm:"tinytext"`
 	Tel       string        `json:"tel" gorm:"tinytext"`
 	Role      constant.Role `json:"role" gorm:"tinytext"`
+	Checkins  []Checkin     `json:"checkins"`
 }
