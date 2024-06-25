@@ -1,6 +1,6 @@
 package model
 
-type Checkin struct {
+type CheckIn struct {
 	Base
 	Event  string `json:"event" gorm:"tinytext"`
 	Email  string `json:"email" gorm:"tinytext"`
