@@ -26,5 +26,5 @@ type User struct {
 	Baan        string        `json:"baan" gorm:"tinytext"`
 	ReceiveGift int           `json:"receive_gift" gorm:"tinyint"`
 	GroupID     *uuid.UUID    `json:"group_id"`
-	CheckIns    []CheckIn     `json:"check_ins"`
+	CheckIns    []*CheckIn    `json:"check_ins"`
 }
