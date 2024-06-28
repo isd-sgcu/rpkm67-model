@@ -9,6 +9,7 @@ type User struct {
 	Base
 	Email       string        `json:"email" gorm:"tinytext;unique"`
 	Nickname    string        `json:"nickname" gorm:"tinytext"`
+	Title       string        `json:"title" gorm:"tinytext"`
 	Firstname   string        `json:"firstname" gorm:"tinytext"`
 	Lastname    string        `json:"lastname" gorm:"tinytext"`
 	Year        int           `json:"year" gorm:"type:smallint"`
