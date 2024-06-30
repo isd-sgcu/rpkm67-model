@@ -8,5 +8,4 @@ type Stamp struct {
 	PointD int    `json:"point_d"`
 	Stamp  string `json:"stamp" gorm:"tinytext"` // e.g. 01000100010 = 2nd workshop + 1st landmark + 1st institute
 	UserID int
-	User   User
 }
