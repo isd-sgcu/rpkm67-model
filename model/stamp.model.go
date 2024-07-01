@@ -1,5 +1,7 @@
 package model
 
+import "github.com/google/uuid"
+
 type Stamp struct {
 	Base
 	PointA int    `json:"point_a"`
@@ -7,5 +9,5 @@ type Stamp struct {
 	PointC int    `json:"point_c"`
 	PointD int    `json:"point_d"`
 	Stamp  string `json:"stamp" gorm:"tinytext"` // e.g. 01000100010 = 2nd workshop + 1st landmark + 1st institute
-	UserID int
+	UserID *uuid.UUID
 }

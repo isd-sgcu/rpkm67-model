@@ -27,5 +27,5 @@ type User struct {
 	ReceiveGift int           `json:"receive_gift" gorm:"tinyint"`
 	GroupID     *uuid.UUID    `json:"group_id"`
 	CheckIns    []*CheckIn    `json:"check_ins"`
-	Stamp       Stamp         `json:"stamp"`
+	Stamp       *Stamp        `json:"stamp"`
 }
