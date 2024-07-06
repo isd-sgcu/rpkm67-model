@@ -8,7 +8,7 @@ import (
 
 type Group struct {
 	Base
-	LeaderID    string       `json:"leader_id"`
+	LeaderID    *uuid.UUID   `json:"leader_id"`
 	Token       string       `json:"token" gorm:"index:, unique"`
 	Members     []*User      `json:"members"`
 	Selections  []*Selection `json:"selections"`
