@@ -3,6 +3,7 @@ package utils
 import (
 	"crypto/sha256"
 	"encoding/base64"
+	"regexp"
 	"time"
 
 	"github.com/google/uuid"
@@ -15,5 +16,7 @@ func hash(bv []byte) string {
 }
 
 func GenGroupToken(id *uuid.UUID) string {
-	return hash([]byte(time.Now().String() + id.String()))
+	hashed := hash([]byte(time.Now().String() + id.String()))
+	re := regexp.MustCompile(`[^a-zA-Z0-9]+`)
+	return re.ReplaceAllString(hashed, "")
 }
